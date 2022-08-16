@@ -10,7 +10,6 @@ services:
   # subsequent runs, the service simply returns immediately, without performing
   # any modification to existing users.
   setup:
-    restart: always
     build:
       context: setup/
       args:
@@ -28,7 +27,6 @@ services:
       - elasticsearch
 
   elasticsearch:
-    restart: always
     build:
       context: elasticsearch/
       args:
@@ -74,7 +72,6 @@ services:
       - elasticsearch
 
   kibana:
-    restart: always
     build:
       context: kibana/
       args:
